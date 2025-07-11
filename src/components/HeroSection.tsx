@@ -46,13 +46,20 @@ export const HeroSection = () => {
               </span>
             </Button>
             
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="btn-glass"
-            >
-              View Resume
-            </Button>
+<a 
+  href="https://drive.google.com/file/d/1DiAHUlBxM1eODGyDHyWeHpylYePSEkSH/view?usp=drive_link" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <Button 
+    variant="outline" 
+    size="lg" 
+    className="btn-glass"
+  >
+    View Resume
+  </Button>
+</a>
+
           </div>
         </ScrollReveal>
 
