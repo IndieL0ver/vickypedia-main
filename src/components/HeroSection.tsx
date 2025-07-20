@@ -18,7 +18,7 @@ export const HeroSection = () => {
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <ScrollReveal>
           <h1 className="text-hero mb-6 font-sans">
-             Tiwo Victorious
+            Victorious Tiwo
           </h1>
         </ScrollReveal>
         

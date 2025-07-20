@@ -15,17 +15,19 @@ export const ProjectsSection = () => {
       description: "A fintech mobile app that simplifies personal finance management",
       image: "https://i.imgur.com/GxVMAvO.jpg",
       gradient: "from-primary/20 to-accent/30",
-      url: "https://www.behance.net/gallery/229228891/Bookly-Mobile-App-Readers-Diary"
-      
+      url: "https://www.behance.net/gallery/219470233/eCountant-Rethinking-How-We-Relate-to-Money",
+      ctaText: "View Case Study →"
     },
     {
       id: 2,
-      name: "MediConnect",
-      role: "Senior UX Designer",
-      tools: ["Sketch", "InVision", "Framer"],
-      description: "Healthcare platform connecting patients with specialists",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop&auto=format",
-      gradient: "from-accent/20 to-primary-glow/30"
+      name: "Pregnancy Journal",
+      role: "Product Designer & Creative Director",
+      tools: ["Photoshop", "Adobe Illustrator"],
+      description: "A guided journal for expectant mothers",
+      image: "https://i.imgur.com/1wg06yj.jpeg",
+      gradient: "from-accent/20 to-primary-glow/30",
+      url: "https://a.co/d/fzqwUfy",
+      ctaText: "View Book on Amazon →"
     },
     {
       id: 3,
@@ -34,7 +36,9 @@ export const ProjectsSection = () => {
       tools: ["Figma", "ProtoPie", "Lottie"],
       description: "Sustainability tracking app for eco-conscious consumers",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop&auto=format",
-      gradient: "from-secondary-warm/30 to-accent-warm/20"
+      gradient: "from-secondary-warm/30 to-accent-warm/20",
+      url: "https://example.com/ecotrack",
+      ctaText: "View Full Prototype →"
     },
     {
       id: 4,
@@ -43,7 +47,9 @@ export const ProjectsSection = () => {
       tools: ["Adobe XD", "Maze", "Hotjar"],
       description: "Educational platform for remote learning experiences",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop&auto=format",
-      gradient: "from-primary-soft/30 to-secondary/20"
+      gradient: "from-primary-soft/30 to-secondary/20",
+      url: "https://example.com/learnspace",
+      ctaText: "See Platform Overview →"
     }
   ];
 
@@ -81,23 +87,22 @@ export const ProjectsSection = () => {
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-3">
                     <a 
-  href={project.url} 
-  target="_blank" 
-  rel="noopener noreferrer"
-  className="text-card-title group-hover:text-primary transition-colors underline-offset-4 hover:underline"
->
-  {project.name}
-</a>
+                      href={project.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-card-title group-hover:text-primary transition-colors underline-offset-4 hover:underline"
+                    >
+                      {project.name}
+                    </a>
 
                     <a 
-  href={project.url}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="opacity-0 group-hover:opacity-100 transition-opacity text-sm text-primary hover:underline"
->
-  View Case Study →
-</a>
-
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-0 group-hover:opacity-100 transition-opacity text-sm text-primary hover:underline"
+                    >
+                      {project.ctaText || "View Case Study →"}
+                    </a>
                   </div>
 
                   <p className="text-sm text-primary/70 mb-2">{project.role}</p>
@@ -118,7 +123,7 @@ export const ProjectsSection = () => {
                   </div>
                 </div>
 
-                {/* Hover Effect Overlay */}
+                {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
             </ScrollReveal>
