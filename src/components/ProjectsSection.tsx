@@ -38,7 +38,7 @@ export const ProjectsSection = () => {
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop&auto=format",
       gradient: "from-secondary-warm/30 to-accent-warm/20",
       url: "https://example.com/ecotrack",
-      ctaText: "View Full Prototype →"
+      ctaText: "coming Soon... →"
     },
     {
       id: 4,
