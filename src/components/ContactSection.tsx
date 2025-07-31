@@ -12,14 +12,6 @@ export const ContactSection = () => {
       link: "mailto:tiwovictorious@gmail.com"
     },
     {
-      platform: "LinkedIn",
-      handle: "@tiwovictorious",
-      action: "Let's connect",
-      icon: "💼",
-      gradient: "from-accent/20 to-primary-glow/30",
-      link: "mailto:tiwovictorious@gmail.com"
-    },
-    {
       platform: "Substack",
       handle: "@kiki510264",
       action: "Read my thoughts",
@@ -50,34 +42,33 @@ export const ContactSection = () => {
                 <div className={`w-16 h-16 bg-gradient-to-br ${method.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <span className="text-2xl">{method.icon}</span>
                 </div>
-                
+
                 <h3 className="text-card-title mb-2 group-hover:text-primary transition-colors">
                   {method.platform}
                 </h3>
-                
+
                 <p className="text-muted-foreground text-sm mb-4">
                   {method.handle}
                 </p>
-                
-                {method.link ? (
-  <a 
-    href={method.link} 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="text-primary hover:text-primary-glow transition-colors text-sm"
-  >
-    {method.action} →
-  </a>
-) : (
-  <Button 
-    variant="ghost" 
-    size="sm"
-    className="text-primary hover:text-primary-glow transition-colors"
-  >
-    {method.action} →
-  </Button>
-)}
 
+                {method.link ? (
+                  <a 
+                    href={method.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary-glow transition-colors text-sm"
+                  >
+                    {method.action} →
+                  </a>
+                ) : (
+                  <Button 
+                    variant="ghost" 
+                    size="sm"
+                    className="text-primary hover:text-primary-glow transition-colors"
+                  >
+                    {method.action} →
+                  </Button>
+                )}
               </div>
             </ScrollReveal>
           ))}
@@ -93,7 +84,7 @@ export const ContactSection = () => {
               I'm currently available for new opportunities and would love to discuss 
               how we can bring your vision to life through thoughtful design.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="btn-primary-glow">
                 Start a Project

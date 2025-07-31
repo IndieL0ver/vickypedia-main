@@ -33,7 +33,7 @@ export const ProjectsSection = () => {
       id: 3,
       name: "EcoTrack",
       role: "Product Designer",
-      tools: ["Figma", "ProtoPie", "Lottie"],
+      tools: ["Figma", "Adobe Xd", ],
       description: "Sustainability tracking app for eco-conscious consumers",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop&auto=format",
       gradient: "from-secondary-warm/30 to-accent-warm/20",
@@ -44,12 +44,12 @@ export const ProjectsSection = () => {
       id: 4,
       name: "LearnSpace",
       role: "UX/UI Designer",
-      tools: ["Adobe XD", "Maze", "Hotjar"],
+      tools: ["Adobe XD", , "Hotjar"],
       description: "Educational platform for remote learning experiences",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop&auto=format",
       gradient: "from-primary-soft/30 to-secondary/20",
       url: "https://example.com/learnspace",
-      ctaText: "See Platform Overview →"
+      ctaText: "Coming Soon... →"
     }
   ];
 
