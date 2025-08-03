@@ -1,11 +1,7 @@
-import { useState } from 'react';
 import { ScrollReveal } from './ScrollReveal';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 export const ProjectsSection = () => {
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
-
   const projects = [
     {
       id: 1,
@@ -22,7 +18,7 @@ export const ProjectsSection = () => {
       id: 2,
       name: "Pregnancy Journal",
       role: "Product Designer & Creative Director",
-      tools: ["Photoshop", "Adobe Illustrator"],
+      tools: ["Photoshop", "Adobe Illustrator", "Adobe Indesign"],
       description: "A guided journal for expectant mothers",
       image: "https://i.imgur.com/1wg06yj.jpeg",
       gradient: "from-accent/20 to-primary-glow/30",
@@ -31,22 +27,22 @@ export const ProjectsSection = () => {
     },
     {
       id: 3,
-      name: "EcoTrack",
+      name: "Interior Digest",
       role: "Product Designer",
-      tools: ["Figma", "Adobe Xd", ],
-      description: "Sustainability tracking app for eco-conscious consumers",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop&auto=format",
+      tools: ["Figma", "Photoshop"],
+      description: "A platform for discovering interior styles, designers, and curated spaces.",
+      image: "https://i.imgur.com/sMsCJ67.jpeg",
       gradient: "from-secondary-warm/30 to-accent-warm/20",
-      url: "https://example.com/ecotrack",
-      ctaText: "coming Soon... →"
+      url: "https://www.behance.net/gallery/231731895/Interior-Digest",
+      ctaText: "View on Behance →"
     },
     {
       id: 4,
-      name: "LearnSpace",
-      role: "UX/UI Designer",
-      tools: ["Adobe XD", , "Hotjar"],
-      description: "Educational platform for remote learning experiences",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop&auto=format",
+      name: "UplitED",
+      role: "UI/UX Designer",
+      tools: ["Adobe XD", "Notion"],
+      description: "Designed for adult learners to learn on their own terms",
+      image: "https://i.imgur.com/DxxCGcb.jpeg",
       gradient: "from-primary-soft/30 to-secondary/20",
       url: "https://example.com/learnspace",
       ctaText: "Coming Soon... →"
@@ -66,12 +62,11 @@ export const ProjectsSection = () => {
         </ScrollReveal>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <ScrollReveal key={project.id} delay={index * 100}>
               <div 
                 className="group glass-card-hover tilt-hover cursor-pointer relative overflow-hidden"
-                onClick={() => setSelectedProject(project.id)}
               >
                 {/* Project Image */}
                 <div className="relative h-64 overflow-hidden rounded-t-2xl">
@@ -129,45 +124,6 @@ export const ProjectsSection = () => {
             </ScrollReveal>
           ))}
         </div>
-
-        {/* Case Study Preview */}
-        {selectedProject && (
-          <ScrollReveal>
-            <div className="glass-card p-8 mt-12">
-              <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-semibold text-primary">
-                  {projects.find(p => p.id === selectedProject)?.name} Case Study
-                </h3>
-                <Button 
-                  variant="ghost" 
-                  onClick={() => setSelectedProject(null)}
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  ✕
-                </Button>
-              </div>
-              
-              <div className="grid md:grid-cols-5 gap-8">
-                {["Problem", "Process", "Wireframes", "Prototype", "Final UI"].map((section, index) => (
-                  <div key={section} className="text-center group cursor-pointer">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/20 transition-colors">
-                      <span className="text-primary font-semibold">{index + 1}</span>
-                    </div>
-                    <p className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
-                      {section}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="mt-8 text-center">
-                <Button className="btn-primary-glow">
-                  View Full Case Study
-                </Button>
-              </div>
-            </div>
-          </ScrollReveal>
-        )}
       </div>
     </section>
   );

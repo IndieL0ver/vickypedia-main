@@ -12,7 +12,7 @@ export const AboutSection = () => {
     },
     {
       title: "Passion",
-      content: "Beyond pixels and wireframes, I'm passionate about creating inclusive experiences that make technology accessible and delightful for everyone."
+      content: "Beyond pixels and wireframes, I’m drawn to the way design shapes how we experience the world, visually, emotionally, and functionally. "
     }
   ];
 
@@ -52,7 +52,7 @@ export const AboutSection = () => {
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { number: "50+", label: "Projects Completed" },
-              { number: "2", label: "Years Experience" },
+              { number: "3+", label: "Years Experience" },
               { number: "4+", label: "Platforms Mastered" },
               { number: "100%", label: "Client Retention Rate" }
             ].map((stat, index) => (
