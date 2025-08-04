@@ -53,7 +53,7 @@ export const AboutSection = () => {
             {[
               { number: "50+", label: "Projects Completed" },
               { number: "3+", label: "Years Experience" },
-              { number: "4+", label: "Platforms Mastered" },
+              { number: "5+", label: "Platforms Mastered" },
               { number: "100%", label: "Client Retention Rate" }
             ].map((stat, index) => (
               <div key={stat.label} className="text-center group">
